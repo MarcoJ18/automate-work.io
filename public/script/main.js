@@ -1,13 +1,33 @@
 const btn = document.getElementById('generate');
 const output = document.getElementById('output');
+
 const terminos = document.getElementById('terminos');
+const aviso = document.getElementById('aviso');
+const cookies = document.getElementById('cookies');
+const accesibilidad = document.getElementById('accesibilidad');
 
+let arrayContent = [terminos,aviso,cookies,accesibilidad];
 
-terminos.addEventListener('click',()=>{
-    terminos.style.color = 'red';
+//filter
+
+arrayContent.forEach(element => {
+    if(element === terminos){
+        
+    }
+});
+
+terminos.addEventListener('click', ()=>{
+   terminos.classList.add('addColor');
+   aviso.classList.remove('addColor');
+   cookies.classList.remove('addColor');
+   accesibilidad.classList.remove('addColor');
 })
 
-const checker = (id) => {
+
+
+
+
+const checker = () => {
 
 }
 
