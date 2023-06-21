@@ -4,24 +4,37 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script type="text/JavaScript" src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+	
 </head>
 <body class="h-screen flex flex-col justify-center align-middle">
 	<header>
 		<h1 class="text-3xl font-bold text-center text-slate-50 m-6 uppercase">
 			Proyect
 		  </h1>
-		  <nav class="text-center text-slate-50 font-semibold">With have a creator of <span class="text-blue-700 font-semibold">Terminos de uso</span>, <span class="text-blue-700 font-semibold">Aviso Legal</span> , <span class="text-blue-700 font-semibold">Politicas de cokies</span> and <span class="text-blue-700 font-semibold">Declaración Accesibilidad Web </span></nav>
+		<nav class="text-center text-slate-50 font-semibold">
+			With have a creator of 
+			<a id="terminos" class="text-blue-700 font-semibold">Terminos de uso</a>, 
+			<a id="aviso" class="text-blue-700 font-semibold">Aviso Legal</a> , 
+			<a id="cookies" class="text-blue-700 font-semibold">Politicas de cokies</a> 
+			and <a id="accesibilidad" class="text-blue-700 font-semibold">Declaración Accesibilidad Web </a>
+		</nav>
 	</header>
 	<main class="flex justify-center items-center m-10 flex-col">
 		<button id="generate" class="bg-white hover:bg-black text-blue-700 font-semibold hover:text-white py-2 px-4 rounded">Generate</button>
 		<div id="output" class="bg-white text-black m-10"></div>
 	</main>
-	<script type="module" src="/script/main.js"></script>
+	<script type="module" src="./script/main.js"></script>
 </body>
 </html>
 <style is:global>
 	body{
 		background: #222;
 	}
+
+	a{
+		cursor: pointer;
+	}
+
 
 </style>
