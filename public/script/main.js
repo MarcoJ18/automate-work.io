@@ -6,33 +6,45 @@ const aviso = document.getElementById('aviso');
 const cookies = document.getElementById('cookies');
 const accesibilidad = document.getElementById('accesibilidad');
 
-let arrayContent = [terminos,aviso,cookies,accesibilidad];
 
-//filter
+let data = '';
 
-arrayContent.forEach(element => {
-    if(element === terminos){
-        
-    }
-});
+
 
 terminos.addEventListener('click', ()=>{
    terminos.classList.add('addColor');
    aviso.classList.remove('addColor');
    cookies.classList.remove('addColor');
    accesibilidad.classList.remove('addColor');
+   data = 'terminos';
 })
+aviso.addEventListener('click', ()=>{
+    terminos.classList.remove('addColor');
+    aviso.classList.add('addColor');
+    cookies.classList.remove('addColor');
+    accesibilidad.classList.remove('addColor');
+    data = 'aviso';
+ })
+
+ cookies.addEventListener('click', ()=>{
+    terminos.classList.remove('addColor');
+    aviso.classList.remove('addColor');
+    cookies.classList.add('addColor');
+    accesibilidad.classList.remove('addColor');
+    data = 'cookies';
+ })
+
+ accesibilidad.addEventListener('click', ()=>{
+    terminos.classList.remove('addColor');
+    aviso.classList.remove('addColor');
+    cookies.classList.remove('addColor');
+    accesibilidad.classList.add('addColor');
+    data = 'accesibilidad';
+ })
+ 
 
 
-
-
-
-const checker = () => {
-
-}
-
-
-btn.addEventListener('click', ()=>{
+const dataUsage = () => {
     let nombre = prompt('Nombre de la empresa:',null);
     let correo = prompt('Correo electronico:',null);
     let direccion = prompt('Lugar de la empresa:',null);
@@ -44,12 +56,39 @@ btn.addEventListener('click', ()=>{
     let fecha = dateEs.format('D/MM/YYYY');
     let fechaL = dateEs.format('LL');
 
+    return[nombre,correo,direccion,numero,CIF,url,fecha,fechaL];
+}
 
 
-    let terminodeuso = `<p><strong>${nombre}</strong>, como responsable del presente Sitio Web y de conformidad con lo dispuesto por la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD) y por la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), ha puesto en práctica aquellas políticas, medios y procedimientos técnicos y organizativos para garantizar y proteger la confidencialidad, integridad y disponibilidad de los datos de carácter personal de sus usuarios. Estos datos serán tratados en un/os fichero/s debidamente inscrito/s en la Agencia Española de Protección de Datos, de conformidad con lo establecido en la legislación vigente.</p>
-<p>En el caso de que los<span> </span><strong>datos</strong><span> </span>a facilitar<span> </span><strong>por el Usuario fueran necesarios</strong><span> </span><strong>para</strong><span> </span>que el equipo de<span> <strong>${nombre}</strong></span> pudiera i) responder a las<strong><span> </span>consultas</strong>, proporcionar informaciones requeridas por el Usuario; ii) realizar toda aquella prestación de<strong><span> </span>servicios</strong><span> </span>y/o productos contratados o suscritos por el Usuario; iii) proporcionar acceso al Usuario a determinadas funcionalidades del Sitio Web; o bien iv) realizar todas aquellas<span> </span><strong>actividades propias de</strong><span> <strong>${nombre}</strong></span> por la presente reseñadas,<span> <strong>${nombre}</strong></span><strong> informará de dicha obligatoriedad</strong><span> </span>al Usuario, indicándole qué datos son de necesaria cumplimentación. Mediante la indicación, facilitación o introducción de dichos datos y de conformidad con lo establecido en el artículo 6 de la L.O.P.D., el Usuario otorga consentimiento inequívoco a<span> <strong>${nombre}</strong></span><span> </span>para que proceda al tratamiento de los datos facilitados en pro de los fines mencionados anteriormente así como para el eventual envío de comunicaciones comerciales de<span> <strong>${nombre}</strong></span> que puedan ser del interés del usuario.</p>
-<p>La<span> </span><strong>entidad responsable de la base de datos</strong>,<strong><span> </span>así como los que intervengan</strong><span> </span>en cualquier fase del tratamiento y/o las entidades a quienes les hayan sido comunicadas -en su caso y en virtud de la correspondiente autorización conferida por el Usuario-, están<span> </span><strong>obligadas a observar el secreto profesional y a adoptar los niveles de protección y</strong><span> </span>las<strong><span> </span>medidas</strong><span> </span>técnicas y organizativas necesarias a su alcance que<span> </span><strong>garanticen la seguridad de los datos</strong><span> </span>de carácter personal, evitando, en la medida de lo posible, accesos no autorizados, modificaciones ilícitas, sustracciones y/o la pérdida de los datos, a fin de procurar el correspondiente nivel de seguridad a los ficheros de<span> <strong>${nombre}</strong></span>, según la naturaleza y sensibilidad de los datos facilitados por los usuarios del presente Sitio Web. Asimismo,<span> <strong>${nombre}</strong></span><span> </span>se compromete a tener implementadas las medidas de seguridad que correspondan en virtud de lo establecido en el Reglamento de Medidas de (R.D. 1720/2007).</p>
-<p>Los<span> </span><strong>usuarios tienen</strong><span> </span>reconocida por la indicada Ley Orgánica de Protección de Datos los<span> </span><strong>derechos de acceso, rectificación, cancelación y oposición y,</strong><span> </span>en su caso, el derecho a<span> </span><strong>revocar</strong><span> </span>en<span> </span><strong>cualquier momento</strong><span> </span>el<span> </span><strong>consentimiento</strong><span> </span>prestado a la recepción de comunicaciones comerciales mediante el envío de<span> </span><strong>correo electrónico a ${correo}</strong><span> </span><strong>o carta</strong><span> </span>a<strong><span> ${direccion}</span><b>.</b></strong></p>`
+const copy = (info) =>{
+    console.log(info);
+    navigator.clipboard.writeText(info).then(() => {
+        alert('Content copied to clipboard');
+        /* Resolved - text copied to clipboard successfully */
+      },() => {
+        alert('Failed to copy');
+        /* Rejected - text failed to copy to the clipboard */
+      });
+}
+
+
+
+
+
+
+btn.addEventListener('click', ()=>{
+
+
+    console.log(dataUsage()[0]);
+
+    if(data === 'terminos'){
+        let terminodeuso = `<p><strong>${nombre}</strong>, como responsable del presente Sitio Web y de conformidad con lo dispuesto por la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD) y por la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), ha puesto en práctica aquellas políticas, medios y procedimientos técnicos y organizativos para garantizar y proteger la confidencialidad, integridad y disponibilidad de los datos de carácter personal de sus usuarios. Estos datos serán tratados en un/os fichero/s debidamente inscrito/s en la Agencia Española de Protección de Datos, de conformidad con lo establecido en la legislación vigente.</p>
+        <p>En el caso de que los<span> </span><strong>datos</strong><span> </span>a facilitar<span> </span><strong>por el Usuario fueran necesarios</strong><span> </span><strong>para</strong><span> </span>que el equipo de<span> <strong>${nombre}</strong></span> pudiera i) responder a las<strong><span> </span>consultas</strong>, proporcionar informaciones requeridas por el Usuario; ii) realizar toda aquella prestación de<strong><span> </span>servicios</strong><span> </span>y/o productos contratados o suscritos por el Usuario; iii) proporcionar acceso al Usuario a determinadas funcionalidades del Sitio Web; o bien iv) realizar todas aquellas<span> </span><strong>actividades propias de</strong><span> <strong>${nombre}</strong></span> por la presente reseñadas,<span> <strong>${nombre}</strong></span><strong> informará de dicha obligatoriedad</strong><span> </span>al Usuario, indicándole qué datos son de necesaria cumplimentación. Mediante la indicación, facilitación o introducción de dichos datos y de conformidad con lo establecido en el artículo 6 de la L.O.P.D., el Usuario otorga consentimiento inequívoco a<span> <strong>${nombre}</strong></span><span> </span>para que proceda al tratamiento de los datos facilitados en pro de los fines mencionados anteriormente así como para el eventual envío de comunicaciones comerciales de<span> <strong>${nombre}</strong></span> que puedan ser del interés del usuario.</p>
+        <p>La<span> </span><strong>entidad responsable de la base de datos</strong>,<strong><span> </span>así como los que intervengan</strong><span> </span>en cualquier fase del tratamiento y/o las entidades a quienes les hayan sido comunicadas -en su caso y en virtud de la correspondiente autorización conferida por el Usuario-, están<span> </span><strong>obligadas a observar el secreto profesional y a adoptar los niveles de protección y</strong><span> </span>las<strong><span> </span>medidas</strong><span> </span>técnicas y organizativas necesarias a su alcance que<span> </span><strong>garanticen la seguridad de los datos</strong><span> </span>de carácter personal, evitando, en la medida de lo posible, accesos no autorizados, modificaciones ilícitas, sustracciones y/o la pérdida de los datos, a fin de procurar el correspondiente nivel de seguridad a los ficheros de<span> <strong>${nombre}</strong></span>, según la naturaleza y sensibilidad de los datos facilitados por los usuarios del presente Sitio Web. Asimismo,<span> <strong>${nombre}</strong></span><span> </span>se compromete a tener implementadas las medidas de seguridad que correspondan en virtud de lo establecido en el Reglamento de Medidas de (R.D. 1720/2007).</p>
+        <p>Los<span> </span><strong>usuarios tienen</strong><span> </span>reconocida por la indicada Ley Orgánica de Protección de Datos los<span> </span><strong>derechos de acceso, rectificación, cancelación y oposición y,</strong><span> </span>en su caso, el derecho a<span> </span><strong>revocar</strong><span> </span>en<span> </span><strong>cualquier momento</strong><span> </span>el<span> </span><strong>consentimiento</strong><span> </span>prestado a la recepción de comunicaciones comerciales mediante el envío de<span> </span><strong>correo electrónico a ${correo}</strong><span> </span><strong>o carta</strong><span> </span>a<strong><span> ${direccion}</span><b>.</b></strong></p>`
+        copy(terminodeuso);
+    }
+
 
 
     let avisolegal = `<p><strong>1. Información corporativa. </strong>En virtud de las obligaciones establecidas por la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico, le informamos que el presente sitio web es propiedad de ${nombre} con C.I.F. ${CIF} con domicilio en ${direccion} y con los siguientes datos de contacto: ${numero}/ ${correo}.</p>
@@ -176,13 +215,7 @@ btn.addEventListener('click', ()=>{
         <li class="relative ml-5 list-disc" >Windows: CTRL + Tecla de acceso rápido.</li>
     </ul>`
 
-    navigator.clipboard.writeText(assecibilidad).then(() => {
-        alert('Content copied to clipboard');
-        /* Resolved - text copied to clipboard successfully */
-      },() => {
-        alert('Failed to copy');
-        /* Rejected - text failed to copy to the clipboard */
-      });
+
 })
 
 
