@@ -6,9 +6,23 @@ const aviso = document.getElementById('aviso');
 const cookies = document.getElementById('cookies');
 const accesibilidad = document.getElementById('accesibilidad');
 
+const elements = [terminos, aviso, cookies, accesibilidad];
+
 
 let data = '';
 
+output.innerHTML = '';
+
+elements.forEach((element) => {
+    element.addEventListener('click', () => {
+      output.innerHTML = '';
+      elements.forEach((el) => el.classList.remove('addColor'));
+      element.classList.add('addColor');
+      data = element.id;
+    });
+  });
+
+/*
 output.innerHTML = '';
 
 terminos.addEventListener('click', ()=>{
@@ -45,7 +59,7 @@ aviso.addEventListener('click', ()=>{
     accesibilidad.classList.add('addColor');
     data = 'accesibilidad';
  })
- 
+ */
 
 
 
