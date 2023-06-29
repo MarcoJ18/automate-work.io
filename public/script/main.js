@@ -221,6 +221,8 @@ btn.addEventListener('click', ()=>{
 
         let direccion = prompt('Lugar de la empresa:',null);
         let url = prompt('Url del sitio:',null);
+        let sortUrl = url.split('/');
+        
         var date = moment();
         let dateEs = date.locale('es');
         let fecha = dateEs.format('D/MM/YYYY');
@@ -230,7 +232,7 @@ btn.addEventListener('click', ()=>{
 
         let accesibilidad = `<p >Actualizado: ${fecha}</p>
         <p >Angélica León se compromete en hacer accesible su sitio web de conformidad con el<span> </span><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-12699" target="_blank" rel="noopener noreferrer" role="link">Real Decreto 1112/2018, sobre accesibilidad de los sitios webs y aplicaciones para dispositivos móviles del sector público. </a></p>
-        <p >La presente declaración de accesibilidad se aplica al sitio web<span> </span><a href="https://www.${url}/" role="link">${url}</a>.</p>
+        <p >La presente declaración de accesibilidad se aplica al sitio web<span> </span><a href="${url}/" role="link">${sortUrl.slice(-1)}</a>.</p>
         
         <h1 class="text-4xl m-0 mb-3" >Situación de cumplimiento</h1>
         <p >Este sitio web es<span> </span><strong>plenamente </strong><strong>conforme</strong> con el RD 1112/2018.</p>
