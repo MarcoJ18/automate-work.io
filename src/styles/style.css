@@ -1,0 +1,18 @@
+body{
+    background: #222;
+}
+
+a{
+    cursor: pointer;
+}
+
+
+.addColor{
+    color: white !important;
+    outline: 1px solid white;
+}
+
+
+input{
+    border: 1px solid black;
+}
