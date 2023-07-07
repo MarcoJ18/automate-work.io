@@ -66,7 +66,7 @@ btn.addEventListener('click', ()=>{
             <label class="font-bold text-xl mb-3"for="direccion">Lugar de la empresa: &rarr;</label>
             <input type="text" class="mb-3 direccion">
 
-            <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold hover:text-white py-2 px-4 rounded mt-2 sender">COPY</button>
+            <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold  py-2 px-4 rounded mt-2 sender">COPY</button>
         </div>
             `;
         
@@ -107,7 +107,7 @@ btn.addEventListener('click', ()=>{
         <label class="font-bold text-xl mb-3"for="cif">CIF o DNI de la empresa &rarr;</label>
         <input type="text" class="mb-3 cif">
 
-        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold hover:text-white py-2 px-4 rounded mt-2 sender">COPY</button>
+        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold  py-2 px-4 rounded mt-2 sender">COPY</button>
     </div>
             `;
 
@@ -165,7 +165,7 @@ btn.addEventListener('click', ()=>{
         <div class="bg-white text-black m-10 flex flex-col max-w-100 p-5 rounded">
         <label class="font-bold text-xl mb-3"for="correo">Correo electronico &rarr;</label>
         <input type="text" class="mb-3 correo">
-        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold hover:text-white py-2 px-4 rounded mt-2 sender">COPY</button>
+        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold  py-2 px-4 rounded mt-2 sender">COPY</button>
     </div>
         
         `;
@@ -251,7 +251,7 @@ btn.addEventListener('click', ()=>{
         <input type="text" class="mb-3 direccion">
         <label class="font-bold text-xl mb-3"for="url">Url del sitio &rarr;</label>
         <input type="text" class="mb-3 url">
-        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold hover:text-white py-2 px-4 rounded mt-2 sender">COPY</button>
+        <button class="outline bg-black text-white hover:bg-white hover:text-black font-semibold py-2 px-4 rounded mt-2 sender">COPY</button>
     </div>
         
         `;
@@ -260,7 +260,7 @@ btn.addEventListener('click', ()=>{
         let direccion = document.querySelector('.direccion');
         let url = document.querySelector('.url');
         let btnSender = document.querySelector('.sender');
-        let sortUrl = url.split('/');
+        let sortUrl = url.value.split('/');
         
         let date = moment();
         let dateEs = date.locale('es');
