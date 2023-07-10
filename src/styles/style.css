@@ -7,10 +7,20 @@ a{
 }
 
 
+
 .addColor{
-    color: white !important;
-    outline: 1px solid white;
+    background: #000 !important;
+    color: #fff !important;
 }
+
+.addColor::after{
+    content: '⬅️';
+}  
+
+.addColor::before{
+    content: '➡️';
+} 
+
 
 
 input{
