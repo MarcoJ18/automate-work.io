@@ -247,6 +247,8 @@ btn.addEventListener('click', ()=>{
 
         output.innerHTML = `
         <div class="bg-white text-black m-10 flex flex-col max-w-100 p-5 rounded">
+        <label class="font-bold text-xl mb-3"for="nombreEmpresa">Nombre &rarr;</label>
+        <input type="text" class="mb-3 nombreEmpresa">
         <label class="font-bold text-xl mb-3"for="direccion">Lugar de la empresa &rarr;</label>
         <input type="text" class="mb-3 direccion">
         <label class="font-bold text-xl mb-3"for="url">Url del sitio &rarr;</label>
@@ -256,6 +258,8 @@ btn.addEventListener('click', ()=>{
         
         `;
 
+
+        let nombre = document.querySelector('.nombreEmpresa');
 
         let direccion = document.querySelector('.direccion');
         let url = document.querySelector('.url');
@@ -268,15 +272,15 @@ btn.addEventListener('click', ()=>{
         let fechaL = dateEs.format('LL');
 
 
-
+        
 
 
         btnSender.addEventListener('click',()=>{
 
-            console.log();
+
             
             let accesibilidad = `<p >Actualizado: ${fecha}</p>
-            <p >Angélica León se compromete en hacer accesible su sitio web de conformidad con el<span> </span><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-12699" target="_blank" rel="noopener noreferrer" role="link">Real Decreto 1112/2018, sobre accesibilidad de los sitios webs y aplicaciones para dispositivos móviles del sector público. </a></p>
+            <p >${nombre.value} se compromete en hacer accesible su sitio web de conformidad con el<span> </span><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-12699" target="_blank" rel="noopener noreferrer" role="link">Real Decreto 1112/2018, sobre accesibilidad de los sitios webs y aplicaciones para dispositivos móviles del sector público. </a></p>
             <p >La presente declaración de accesibilidad se aplica al sitio web<span> </span><a href="${url.value}/" role="link">${url.value.split('//')[1].replace('/','')}</a>.</p>
             
             <h1 class="text-4xl m-0 mb-3" >Situación de cumplimiento</h1>
