@@ -326,6 +326,7 @@ btn.addEventListener('click', ()=>{
                 <li class="relative ml-5 list-disc" >Windows: CTRL + Tecla de acceso rápido.</li>
             </ul>`
             copyToClipboard(accesibilidad);
+            nombre.value='';
             url.value = '';
             direccion.value = '';
         })
