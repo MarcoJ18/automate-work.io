@@ -14,5 +14,9 @@
     "astro": "^2.6.5",
     "moment": "^2.29.4",
     "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
   }
 }
