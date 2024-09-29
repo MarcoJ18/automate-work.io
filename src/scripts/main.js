@@ -265,13 +265,20 @@ btn.addEventListener('click', ()=>{
         let url = document.querySelector('.url');
         let btnSender = document.querySelector('.sender');
        
-        
+       /* 
         let date = moment();
         let dateEs = date.locale('es');
         let fecha = dateEs.format('D/MM/YYYY');
         let fechaL = dateEs.format('LL');
+*/
+
+        let date = new Date();
+        let optionsShort = { day: 'numeric', month: 'numeric', year: 'numeric' };
+        let fecha = new Intl.DateTimeFormat('es-ES', optionsShort).format(date);
 
 
+        let optionsLong = { day: 'numeric', month: 'long', year: 'numeric' };
+        let fechaL = new Intl.DateTimeFormat('es-ES', optionsLong).format(date);
         
 
 
