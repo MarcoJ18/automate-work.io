@@ -1,5 +1,3 @@
-import moment from "moment";
-
 const btn = document.getElementById('generate');
 const output = document.getElementById('output');
 
