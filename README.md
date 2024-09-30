@@ -54,3 +54,10 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [ ] LocalStorage or Save text you write in the other question ⁉️
 - [ ] Change to better style ⚔️
 - [ ] Migrate to React ⚛️
+
+## TODO
+
+- [ ] Fix css style complete page
+- [ ] Save the content if same
+- [ ] Init form to put anything only copy paste
+
