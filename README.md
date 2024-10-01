@@ -57,7 +57,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## TODO
 
-- [ ] Fix css style complete page
-- [ ] Save the content if same
+- [x] Fix css style complete page
+- [x] Save the content if same
 - [ ] Init form to put anything only copy paste
 
