@@ -11,13 +11,14 @@
 
 <body>
     <main class="m-3">
+        <h1 class="text-center p-2 text-uppercase">policy Proyect</h1>
         <form class="container d-grid border p-3 gap-3 col-xl-6" method="post" action="data.php">
             <div>
-                <label for="nombreEmpresa" class="form-label">Nombre de la Empresa</label>
+                <label for="nombreEmpresa" class="form-label">Nombre de la Empresa:</label>
                 <input type="text" class="form-control" id="nombreEmpresa" required>            
             </div>
             <div>
-                <label for="correoElectronico" class="form-label">Correo electronico</label>
+                <label for="correoElectronico" class="form-label">Correo electronico:</label>
                 <input type="email" class="form-control" id="correoElectronico" required>            
             </div>
             <div>
@@ -25,18 +26,18 @@
                 <input type="text" class="form-control" id="exampleInputEmail1" required>            
             </div>
             <div>
-                <label for="numeroTelefono" class="form-label">Número de telefono de la empresa</label>
+                <label for="numeroTelefono" class="form-label">Número de telefono de la empresa:</label>
                 <input type="tel" class="form-control" id="numeroTelefono" required>            
             </div>
             <div>
-                <label for="cifEmpresa" class="form-label">CIF o DNI de la empresa</label>
+                <label for="cifEmpresa" class="form-label">CIF o DNI de la empresa:</label>
                 <input type="number" class="form-control" id="cifEmpresa" required>            
             </div>
             <div>
-                <label for="urlSite" class="form-label">Url del sitio</label>
+                <label for="urlSite" class="form-label">Url del sitio:</label>
                 <input type="url" class="form-control" id="urlSite" required>            
             </div>
-            <button type="submit" class="btn btn-dark">Enviar</button>
+            <button type="submit" class="btn btn-dark">Enviar:</button>
         </form>
     </main>
 
