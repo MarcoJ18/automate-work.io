@@ -60,4 +60,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [x] Fix css style complete page
 - [x] Save Content
 - [ ] Init form to put anything only copy paste
+- [ ] Add Github ICON
 
