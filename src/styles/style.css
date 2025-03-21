@@ -1,28 +1,15 @@
+:root{
+    --background-color:#311D3F;
+    --content-color:#522546;
+    --content-color-ligth:#88304E;
+    --letter-color:#E23E57;
+}
+
+
+
+
+
 body{
-    background: #222;
-}
-
-a{
-    cursor: pointer;
-}
-
-
-
-.addColor{
-    background: #000 !important;
-    color: #fff !important;
-}
-
-.addColor::after{
-    content: '⬅️';
-}  
-
-.addColor::before{
-    content: '➡️';
-} 
-
-
-
-input{
-    border: 1px solid black;
+    background: var(--background-color);
+    color: var(--letter-color);
 }

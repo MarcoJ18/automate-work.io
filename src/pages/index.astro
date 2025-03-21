@@ -3,16 +3,25 @@
 import "../styles/style.css";
 
 ---
+<!--const fields = [
+  { id: "correo", label: "Correo de la empresa", tipo: "email" },
+  { id: "location", label: "Lugar de la empresa", tipo: "text" },
+  { id: "phone", label: "Teléfono de la empresa", tipo: "tel" }
+];
+-->
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/policy.svg" type="image/x-icon">
+	<link rel="shortcut icon" href="/public/Bridge_Four_Badge.svg" type="image/x-icon">
 	<title>Policy generator</title>
+	<script src="https://kit.fontawesome.com/e93388ad81.js" crossorigin="anonymous"></script>
 </head>
 <body class="flex flex-col justify-center align-middle">
+	<!--
 	<header>
 		<h1 class="text-3xl font-bold text-center text-slate-50 m-6 uppercase">
 			Proyect
@@ -31,5 +40,81 @@ import "../styles/style.css";
 		</div>
 	</main>
 	<script src="../scripts/main.js"></script>
+
+-->
+
+<!--
+<header>
+	<h1 class="text-3xl font-bold text-center m-6 uppercase underline">
+		Policy Generator
+	  </h1>
+</header>
+-->
+
+<main class="grid grid-cols-1 md:grid-cols-2 gap-6 content-center h-screen p-24">
+
+		<form method="get" class="flex flex-col">
+			
+			<!--   {fields.map((field) => (
+				<p class="grid grid-cols-2 gap-2">
+				  <label for={field.id} class="font-medium">{field.label}:</label>
+				  <input id={field.id} type={field.type} class="border p-2 rounded-md" />
+				</p>
+			  ))}
+
+			  Automate work , not working because use typescript learn and use 
+		-->
+			
+		<p class="grid grid-cols-2">
+			<label for="name">
+				<span>Nombre de la empresa:</span>
+			</label>
+			<input type="text" id="name">
+		</p>
+
+		<p class="grid grid-cols-2">
+			<label for="correo">
+				<span>Correo de la empresa:</span>
+			</label>
+			<input type="email" id="correo"> 
+		</p>
+
+		<p class="grid grid-cols-2">
+			<label for="location">
+				<span>Lugar de la empresa:</span>
+			</label>
+			<input type="text" id="location">
+		</p>
+
+		<p class="grid grid-cols-2">
+			<label for="phone">
+			<span>Télefono de la empresa:</span>
+			</label>
+			<input type="tel">
+		</p>
+
+		<p class="grid grid-cols-2">
+			<label for="dni">
+				<span>CIF o DNI de la empresa</span>
+			</label>
+		</p>
+
+			<input type="text"> <!--Correo electronico -->
+			<input type="text"> <!--URL del sitio -->
+			<input type="text"> <!--Clear method -->
+		</form>
+	
+		<aside class="flex flex-col">
+			<button>Términos de uso</button>
+			<button>Aviso Legal</button>
+			<button>Políticas de cookies</button>
+			<button>Declaración de accesibilidad Web</button>
+		</aside>
+</main>
+	
+
+
+
+  
 </body>
 </html>
