@@ -1,8 +1,4 @@
 
----
-import "../styles/style.css";
-
----
 <!--const fields = [
   { id: "correo", label: "Correo de la empresa", tipo: "email" },
   { id: "location", label: "Lugar de la empresa", tipo: "text" },
@@ -19,8 +15,28 @@ import "../styles/style.css";
 	<link rel="shortcut icon" href="/public/Bridge_Four_Badge.svg" type="image/x-icon">
 	<title>Policy generator</title>
 	<script src="https://kit.fontawesome.com/e93388ad81.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+		body{
+			font-family: "Roboto", sans-serif;
+  			font-optical-sizing: auto;
+  			font-weight: 600;
+  			font-style: normal;
+  			font-variation-settings:
+    			"wdth" 100;
+		}
+
+
+		
+
+		
+
+
+	</style>
 </head>
-<body class="flex flex-col justify-center align-middle">
+<body class="bg-background_color text-letter_color">
 	<!--
 	<header>
 		<h1 class="text-3xl font-bold text-center text-slate-50 m-6 uppercase">
@@ -53,7 +69,7 @@ import "../styles/style.css";
 
 <main class="grid grid-cols-1 md:grid-cols-2 gap-6 content-center h-screen p-24">
 
-		<form method="get" class="flex flex-col">
+		<form method="get" class="flex flex-col gap-3 border-2 p-5 border-none rounded shadow-letter_color shadow [&_span]:capitalize [&_input]:h-8 [&_input]:rounded">
 			
 			<!--   {fields.map((field) => (
 				<p class="grid grid-cols-2 gap-2">
@@ -65,7 +81,7 @@ import "../styles/style.css";
 			  Automate work , not working because use typescript learn and use 
 		-->
 			
-		<p class="grid grid-cols-2">
+		<p class="grid grid-cols-2 ">
 			<label for="name">
 				<span>Nombre de la empresa:</span>
 			</label>
@@ -90,25 +106,39 @@ import "../styles/style.css";
 			<label for="phone">
 			<span>Télefono de la empresa:</span>
 			</label>
-			<input type="tel">
+			<input type="tel" id="phone">
 		</p>
 
 		<p class="grid grid-cols-2">
 			<label for="dni">
-				<span>CIF o DNI de la empresa</span>
+				<span>CIF o DNI de la empresa:</span>
 			</label>
+			<input type="text" id="dni">
 		</p>
+		<p class="grid grid-cols-2">
+			<label for="correo">
+				<span>Correo electronico:</span>
+			</label>
+			<input type="email">
+		</p>
+		<p class="grid grid-cols-2">
+			<label for="url">
+				<span>URL del sitio:</span>
+			</label>
+			<input type="text" id="url">
+		</p>
+		<div class="w-full">
+			<button class="bg-content_color hover:bg-content_color_ligth text-white font-bold py-2 px-4 rounded w-full">Clear data</button>
+		</div>
+		
 
-			<input type="text"> <!--Correo electronico -->
-			<input type="text"> <!--URL del sitio -->
-			<input type="text"> <!--Clear method -->
 		</form>
 	
-		<aside class="flex flex-col">
-			<button>Términos de uso</button>
-			<button>Aviso Legal</button>
-			<button>Políticas de cookies</button>
-			<button>Declaración de accesibilidad Web</button>
+		<aside class="flex flex-col p-5 border-none rounded shadow-letter_color shadow gap-6 justify-center">
+			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-content_color_ligth text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Términos de uso</button>
+			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-content_color_ligth text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Aviso Legal</button>
+			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-content_color_ligth text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Políticas de cookies</button>
+			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-content_color_ligth text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Declaración de accesibilidad Web</button>
 		</aside>
 </main>
 	
