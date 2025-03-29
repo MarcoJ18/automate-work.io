@@ -1,151 +1,143 @@
+---
+import CustomInput from "../components/CustomInput.astro";
+---
 
-<!--const fields = [
-  { id: "correo", label: "Correo de la empresa", tipo: "email" },
-  { id: "location", label: "Lugar de la empresa", tipo: "text" },
-  { id: "phone", label: "Teléfono de la empresa", tipo: "tel" }
-];
--->
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/public/Bridge_Four_Badge.svg" type="image/x-icon">
-	<title>Policy generator</title>
-	<script src="https://kit.fontawesome.com/e93388ad81.js" crossorigin="anonymous"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<style>
-		body{
-			font-family: "Roboto", sans-serif;
-  			font-optical-sizing: auto;
-  			font-weight: 600;
-  			font-style: normal;
-  			font-variation-settings:
-    			"wdth" 100;
-		}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/public/Bridge_Four_Badge.svg"
+      type="image/x-icon"
+    />
+    <title>Policy generator</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+    </style>
+  </head>
+  <body class="bg-primary_color text-text_color">
+    <!--From Uiverse.io by alexruix-->
 
+    <main class="grid grid-cols-1 gap-6 content-center md:grid-cols-2">
+      <section></section>
 
-		
+      <section class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-lg text-center">
+          <h1 class="text-2xl font-bold sm:text-3xl">Welcome Back!</h1>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero
+            nulla eaque error neque ipsa culpa autem, at itaque nostrum!
+          </p>
+        </div>
 
-		
-
-
-	</style>
-</head>
-<body class="bg-primary_color text-text_color">
-	<!--
-	<header>
-		<h1 class="text-3xl font-bold text-center text-slate-50 m-6 uppercase">
-			Proyect
-		  </h1>
-		<nav id="nav" class="text-center text-slate-50 font-semibold flex flex-row justify-center items-center  gap-1 flex-wrap p-2">
-			With have a creator of 
-			<a id="terminos" class="bg-white text-blue-700 font-semibold p-2 px-2 rounded hover:text-white hover:bg-black md:py-2 md:px-4">Terminos de uso</a>, 
-			<a id="aviso" class="bg-white text-blue-700 font-semibold p-2 px-2 rounded hover:text-white hover:bg-black md:py-2 md:px-4">Aviso Legal</a> , 
-			<a id="cookies" class="bg-white text-blue-700 font-semibold p-2 px-2 rounded hover:text-white hover:bg-black md:py-2 md:px-4">Politicas de cokies</a> 
-			and <a id="accesibilidad" class="bg-white text-blue-700 font-semibold p-2 px-2 rounded hover:text-white hover:bg-black md:py-2 md:px-4">Declaración Accesibilidad Web </a>
-		</nav>
-	</header>
-	<main class="flex justify-center items-center m-10 flex-col">
-		<button id="generate" class="bg-white hover:bg-black text-blue-700 font-semibold hover:text-white py-2 px-4 rounded">GENERATE</button>
-		<div id="output">
-		</div>
-	</main>
-	<script src="../scripts/main.js"></script>
-
--->
-
-<!--
-<header>
-	<h1 class="text-3xl font-bold text-center m-6 uppercase underline">
-		Policy Generator
-	  </h1>
-</header>
--->
-
-<main class="grid grid-cols-1 gap-6 content-center px-24 m-10 md:px-[450px]">
-
-		<form method="get" class="bg-secondary_color flex flex-col gap-3 border-2 p-8 border-none rounded shadow-letter_color shadow [&_span]:capitalize [&_input]:h-8 [&_input]:rounded">
-			
-			<!--   {fields.map((field) => (
-				<p class="grid grid-cols-2 gap-2">
-				  <label for={field.id} class="font-medium">{field.label}:</label>
-				  <input id={field.id} type={field.type} class="border p-2 rounded-md" />
-				</p>
-			  ))}
-
-			  Automate work , not working because use typescript learn and use 
-		-->
-			
-		<p class="grid grid-cols-1 ">
-			<label for="name">
-				<span>Nombre de la empresa:</span>
-			</label>
-			<input type="text" id="name">
-		</p>
-
-		<p class="grid grid-cols-1">
-			<label for="correo">
-				<span>Correo de la empresa:</span>
-			</label>
-			<input type="email" id="correo"> 
-		</p>
-
-		<p class="grid grid-cols-1">
-			<label for="location">
-				<span>Lugar de la empresa:</span>
-			</label>
-			<input type="text" id="location">
-		</p>
-
-		<p class="grid grid-cols-1">
-			<label for="phone">
-			<span>Télefono de la empresa:</span>
-			</label>
-			<input type="tel" id="phone">
-		</p>
-
-		<p class="grid grid-cols-1">
-			<label for="dni">
-				<span>CIF o DNI de la empresa:</span>
-			</label>
-			<input type="text" id="dni">
-		</p>
-		<p class="grid grid-cols-1">
-			<label for="correo">
-				<span>Correo electronico:</span>
-			</label>
-			<input type="email">
-		</p>
-		<p class="grid grid-cols-1">
-			<label for="url">
-				<span>URL del sitio:</span>
-			</label>
-			<input type="text" id="url">
-		</p>
-		<div class="w-full mt-5">
-			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-accent_color text-white font-bold py-2 px-4 rounded w-full">Clear data</button>
-		</div>
-		
-
-		</form>
+        <form class="mx-auto mb-0 mt-8 max-w-md space-y-4" action="#">
+		<!-- Add business -->
+          <CustomInput
+            id="business"
+            label="Business Name"
+            placeholder="Enter your business name"
+            type="text"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-gray-400"
 	
-		<aside class="flex flex-col p-5 gap-6 justify-center md:absolute top-0 right-16 bottom-16">
-			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-accent_color text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Términos de uso</button>
-			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-accent_color text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Aviso Legal</button>
-			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-accent_color text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Políticas de cookies</button>
-			<button class="outline outline-1 outline-letter_color hover:outline-none backdrop-blur-sm hover:bg-accent_color text-white font-bold py-2 px-4 rounded w-full transition hover:scale-100">Declaración de accesibilidad Web</button>
-		</aside>
-	
-</main>
-	
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
+              ></path>
+            </svg>
+          </CustomInput>
 
-
-
+		  <!-- Email of business -->
+		  <CustomInput
+		  id="businessEmail"
+		  label="Email business"
+		  placeholder="Enter your email"
+		  type="email"
+		>
+		  <svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			class="size-6 text-gray-400"
   
-</body>
+		  >
+			<path
+			  stroke-linecap="round"
+			  stroke-linejoin="round"
+			  d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
+			></path>
+		  </svg>
+		</CustomInput>
+
+		  
+
+          <div>
+            <label class="sr-only" for="password">Password</label>
+            <div class="relative">
+              <input
+                placeholder="Enter your password"
+                class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                id="password"
+                type="password"
+              />
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4"
+              >
+                <svg
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="h-6 w-6 text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"></path>
+                  <path
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-600">
+              No account yet?
+              <a href="#" class="underline">Create one</a>
+            </p>
+            <button
+              class="inline-block rounded-lg bg-purple-600 px-5 py-3 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <section></section>
+      </section>
+    </main>
+  </body>
 </html>

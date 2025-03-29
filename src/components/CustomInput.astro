@@ -1,0 +1,19 @@
+---
+const { id = "", label = "", placeholder = "", type="text" } = Astro.props; //Create a component here are the props
+---
+
+<div>
+  <label class="sr-only" for={id}>{label}</label>
+  <div class="relative">
+    <input
+      placeholder={placeholder}
+      class="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+      id={id}
+      type={type}
+    />
+    <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+        <!--# Here is the content where you put within of component -->
+      <slot/> 
+    </span>
+  </div>
+</div>
