@@ -58,6 +58,7 @@ class DataHandler {
 }
 
 // Crear una instancia de la clase, pasando los ID de los elementos.
+/*
 const dataHandler = new DataHandler("business");
 const dataHandlerBusiness = new DataHandler("business");
 const dataHandlerEmail = new DataHandler("businessEmail");
@@ -68,3 +69,4 @@ const dataHandlerUrl = new DataHandler("urlSite");
 
 
 export default DataHandler;
+*/
