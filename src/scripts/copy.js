@@ -1,34 +1,33 @@
-class test {
-  constructor() {
-    this.copyButton = document.getElementById("copy");
+class CopyDataHandler{
+    constructor(inputId){
+        this.inputIds = inputId;
+        this.copyButton = document.getElementById("copy");
+        this.init();
+    }
 
-    this.init();
-  }
-
-  // Inicializa los eventos del botón.
-  init() {
-    this.copyButton.addEventListener("click", () => this.handleCopyClick());
-  }
-
-
-  //Copy element
-
-  handleCopyClick(data){
-    setTimeout(async()=>{
-        await navigator.clipboard.writeText(data)
-        .then(() => {
-            alert('Content copied to clipboard');
-        })
-        .catch((error) => {
-            alert('Failed to copy content to clipboard: ' + error);
-        });
-    },100)    
+    init() {
+        this.copyButton.addEventListener("click", () => this.handleCopyClick());
+      }
     
-  }
+    
+      //Copy element
+    
+      handleCopyClick(data){
 
+        const selectValue = document.getElementById("options")
 
+        setTimeout(async()=>{
+            await navigator.clipboard.writeText(data)
+            .then(() => {
+                alert(selectValue.value);
+            })
+            .catch((error) => {
+                alert('Failed to copy content to clipboard: ' + error);
+            });
+        },100)    
+        
+      }
 }
 
 
-
-const terminosuso = new test;
+export default CopyDataHandler;
