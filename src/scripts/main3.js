@@ -1,17 +1,28 @@
 import ClearDataHandler from "./clear";
 import CopyDataHandler from "./copy";
 
-function init() {
-  new ClearDataHandler([
-    "business",
-    "businessEmail",
-    "locationBusiness",
-    "phoneBusiness",
-    "dni",
-    "urlSite",
-  ]);
+const dataInputIds = [
+  "business",
+  "businessEmail",
+  "locationBusiness",
+  "phoneBusiness",
+  "dni",
+  "urlSite",
+]
 
-  new CopyDataHandler();
+const dataButtonIds = [
+  "Terminosdeuso",
+  "Avisolegal",
+  "Politicasdecookies",
+  "Declaraciondeaccesibilidad"
+
+]
+
+
+function init() {
+  new ClearDataHandler(dataInputIds);
+
+  new CopyDataHandler(dataButtonIds);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

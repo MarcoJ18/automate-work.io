@@ -1,30 +1,27 @@
 class CopyDataHandler{
-    constructor(inputId){
-        this.inputIds = inputId;
-        this.copyButton = document.getElementById("copy");
+    constructor(buttonId){
+        this.buttonIds = buttonId;
         this.init();
 
     }
 
     init() {
-        this.copyButton.addEventListener("click", () => this.selectorData());
-        this.copyButton.addEventListener("click", () => this.handleCopyClick());
-        
+        this.buttonIds.forEach(ids => {
+            document.getElementById(ids).addEventListener("click",()=> this.handleCopyClick());
+        });
+    
       }
     
 
 
-      //Copy element
+      //Copy handle click
     
-      handleCopyClick(value){
+      handleCopyClick(){
 
-
-        console.log("Valor seleccionado:", selectedValue);
-        
         setTimeout(async()=>{
-            await navigator.clipboard.writeText(value)
+            await navigator.clipboard.writeText()
             .then(() => {
-                alert(value);
+                alert("test");
             })
             .catch((error) => {
                 alert('Failed to copy content to clipboard: ' + error);

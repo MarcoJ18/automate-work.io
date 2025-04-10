@@ -6,3 +6,9 @@ This is for the structure of page: https://excalidraw.com/
 Idea of selector of policy: https://cdn.prod.website-files.com/5f16d69f1760cdba99c3ce6e/6722435d9ba32a39b241dfef_AD_4nXctHoymMhOy-mjtRUr7eSEcmMKGKOkxxNfb3y2zKAwxwdOO0HlfiVsgKciodkEmrwIvOmfEkZzoaPfH4vSBLeojNFs8hLC5z0ZwQZCkNZrovwRpNIZt8ZVzSR2_Ro0lEATUU87Q2FaC8jLsO7FzO6zb29Xn.webp
 
 Idea of page: http://cdn.prod.website-files.com/5f16d69f1760cdba99c3ce6e/672274b685052b277d347206_67227450929b8239576eabce_04.webp
+
+
+https://codepen.io/NielsVoogt/pen/eYBQpPR
+
+
+https://www.creative-tim.com/twcomponents/component/login-form-35
