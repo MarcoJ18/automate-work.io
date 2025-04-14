@@ -22,7 +22,7 @@ const dataButtonIds = [
 function init() {
   new ClearDataHandler(dataInputIds);
 
-  new CopyDataHandler(dataButtonIds);
+  new CopyDataHandler(dataButtonIds,dataInputIds);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
