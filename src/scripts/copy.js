@@ -62,7 +62,7 @@ class CopyDataHandler{
         }
         else if(buttonId === "Avisolegal"){
 
-            let avisolegal = `<p><strong>1. Información corporativa. </strong>En virtud de las obligaciones establecidas por la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico, le informamos que el presente sitio web es propiedad de ${valueInputs[0]} con C.I.F. ${cif.value} con domicilio en ${direccion.value} y con los siguientes datos de contacto: ${numero.value}/ ${correo.value}.</p>
+            let avisolegal = `<p><strong>1. Información corporativa. </strong>En virtud de las obligaciones establecidas por la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico, le informamos que el presente sitio web es propiedad de ${valueInputs[0]} con C.I.F. ${valueInputs[4]} con domicilio en ${valueInputs[2]} y con los siguientes datos de contacto: ${valueInputs[3]}/ ${valueInputs[1]}.</p>
             <p ><strong>2. Protección de contenidos. </strong>El usuario reconoce y acepta que todos los derechos de propiedad industrial e intelectual sobre los contenidos y/o cualesquiera otros elementos insertados por ${valueInputs[0]} en el presente Sitio Web (incluyendo, a título meramente enunciativo y no limitativo, todos aquellos elementos que conforman la apariencia visual, imagen gráfica y otros estímulos sensoriales del sitio web o «look and feel»: marcas, logotipos, nombres comerciales, textos, imágenes, gráficos, diseños, sonidos, bases de datos, software, diagramas de flujo, presentación, arquitectura de navegación, así como los códigos fuente de las páginas web) pertenecen a ${valueInputs[0]} y/o a terceros a los cuales les han cedido sus derechos.</p>
             <p >En ningún caso el acceso al Sitio Web implica algún tipo de permiso, renuncia, transmisión, licencia o cesión total ni parcial de dichos derechos por parte de sus titulares, salvo que se establezca expresamente lo contrario. Los presentes términos y condiciones de uso del Sitio Web no confieren a los USUARIOS ningún otro derecho de utilización, alteración, explotación, reproducción, distribución o comunicación pública del Sitio Web y/o de sus contenidos distintos de los aquí expresamente previstos.</p>
             <p >Queda terminantemente prohibida la utilización de tales elementos, su total o parcial reproducción, comunicación y/o distribución con fines comerciales o lucrativos, así como su modificación, alteración, descompilación y/o cualquier otro acto de explotación del Sitio Web.</p>
@@ -91,7 +91,7 @@ class CopyDataHandler{
         
         }
         else if(buttonId === "Politicasdecookies"){
-            let cookies = `<p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Esta página web usa cookies para mejorar la experiencia del usuario. A continuación, encontrará información sobre qué son las cookies, qué tipo de cookies utiliza esta página, cómo puede desactivar las cookies en su navegador y cómo desactivar específicamente la instalación de cookies de terceros. Si no encuentra la información específica que usted está buscando, por favor envíe un correo a </span></span></span></span><a href="mailto:${correo.value}"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>${correo.value}</span></span></span></span></a><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>.</span></span></span></span></p>
+            let cookies = `<p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Esta página web usa cookies para mejorar la experiencia del usuario. A continuación, encontrará información sobre qué son las cookies, qué tipo de cookies utiliza esta página, cómo puede desactivar las cookies en su navegador y cómo desactivar específicamente la instalación de cookies de terceros. Si no encuentra la información específica que usted está buscando, por favor envíe un correo a </span></span></span></span><a href="mailto:${valueInputs[1]}"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>${valueInputs[1]}</span></span></span></span></a><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>.</span></span></span></span></p>
             <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Qué son las cookies? </span></span></span></span></strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Las cookies son pequeños archivos que algunas plataformas, como las páginas web, pueden instalar en su ordenador, smartphone, tableta o televisión conectada. Sus funciones pueden ser muy variadas: almacenar sus preferencias de navegación, recopilar información estadística, permitir ciertas funcionalidades técnicas, etc.</span></span></span></span></p>
             <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Por qué las utilizamos? </span></span></span></span></strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Las cookies son útiles por varios motivos. Desde un punto de vista técnico, permiten que las páginas web funcionen de forma más ágil y adaptada a sus preferencias, como por ejemplo almacenar su idioma o la moneda de su país. Además, ayudan a los responsables de los sitios web a mejorar los servicios que ofrecen, gracias a la información estadística que recogen a través de ellas y sirven para hacer más eficiente la publicidad que le podemos mostrar.</span></span></span></span></p>
             <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Qué uso le damos a los diferentes tipos de cookies? </span></span></span></span></strong></p>
@@ -153,9 +153,19 @@ class CopyDataHandler{
         
         }
         else if(buttonId === "Declaraciondeaccesibilidad"){
+
+
+            let date = new Date();
+            let optionsShort = { day: 'numeric', month: 'numeric', year: 'numeric' };
+            let fecha = new Intl.DateTimeFormat('es-ES', optionsShort).format(date);
+    
+    
+            let optionsLong = { day: 'numeric', month: 'long', year: 'numeric' };
+            let fechaL = new Intl.DateTimeFormat('es-ES', optionsLong).format(date);
+
             let accesibilidad = `<p >Actualizado: ${fecha}</p>
             <p >${valueInputs[0]} se compromete en hacer accesible su sitio web de conformidad con el<span> </span><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-12699" target="_blank" rel="noopener noreferrer" role="link">Real Decreto 1112/2018, sobre accesibilidad de los sitios webs y aplicaciones para dispositivos móviles del sector público. </a></p>
-            <p >La presente declaración de accesibilidad se aplica al sitio web<span> </span><a href="${url.value}/" role="link">${url.value.split('//')[1].replace('/','')}</a>.</p>
+            <p >La presente declaración de accesibilidad se aplica al sitio web<span> </span><a href="${valueInputs[5]}/" role="link">${valueInputs[5]}</a>.</p>
             
             <h1 class="text-4xl m-0 mb-3" >Situación de cumplimiento</h1>
             <p >Este sitio web es<span> </span><strong>plenamente </strong><strong>conforme</strong> con el RD 1112/2018.</p>
@@ -170,7 +180,7 @@ class CopyDataHandler{
             <p >1. Informar sobre cualquier posible incumplimiento por parte de este sitio web.</p>
             <p >2. Transmitir otras dificultades de acceso al contenido</p>
             <p >3. Formular cualquier otra consulta o sugerencia de mejora relativa a la accesibilidad del sitio web</p>
-            <p >A través de nuestros formulario de contacto, o de manera presencial en: ${direccion.value}</p>
+            <p >A través de nuestros formulario de contacto, o de manera presencial en: ${valueInputs[2]}</p>
             <p >Indicando en el Asunto: «Accesibilidad Web»</p>
             <p >Las comunicaciones serán recibidas y tratadas por el equipo de Accesibilidad.</p>
             <p ><strong>Contenido opcional</strong></p>
