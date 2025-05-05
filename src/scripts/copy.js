@@ -1,4 +1,6 @@
 import { legalTexts } from "./legalText.js";
+import Swal from 'sweetalert2';
+
 
 class CopyDataHandler {
   constructor(buttonId, inputId) {
@@ -23,6 +25,31 @@ class CopyDataHandler {
 
   handleCopyClick(value) {
     setTimeout(async () => {
+      try {
+        await navigator.clipboard.writeText(value);
+        Swal.fire({
+          icon: 'success',
+          title: '¡Copiado!',
+          text: 'El contenido se copió correctamente.',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          toast: true,
+          position: 'top-end',
+        });
+      } catch (error) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al copiar',
+          text: error.toString(),
+        });
+      }
+    }, 100);
+  }
+  
+/*
+  handleCopyClick(value) {
+    setTimeout(async () => {
       await navigator.clipboard
         .writeText(value)
         .then(() => {
@@ -33,6 +60,7 @@ class CopyDataHandler {
         });
     }, 100);
   }
+  */
 
   getValueData() {
     let inputData = [];
