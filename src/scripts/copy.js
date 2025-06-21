@@ -74,17 +74,17 @@ class CopyDataHandler {
   valueControl(buttonId) {
     let [company, email, address, phone, dni, url] = this.getValueData();
 
-    if (legalTexts[buttonId]) {
-      const legalContent = legalTexts[buttonId](company, email, address); //Termino de uso
+    if (legalTexts[buttonId]) {      
+      const legalContent = legalTexts[buttonId](company, email, address, phone, dni, url); //Termino de uso
       this.handleCopyClick(legalContent);
     } else if (legalTexts[buttonId]) {
-      const legalContent = legalTexts[buttonId](company,email,address,phone,dni); //AvisoLegal
+      const legalContent = legalTexts[buttonId](company, email, address, phone, dni, url); //AvisoLegal
       this.handleCopyClick(legalContent);
     } else if (legalTexts[buttonId]) {
-      const legalContent = legalTexts[buttonId](email); // Cookies
+      const legalContent = legalTexts[buttonId](company, email, address, phone, dni, url); // Cookies
       this.handleCopyClick(legalContent);
     } else if (legalTexts[buttonId]) {
-      const legalContent = legalTexts[buttonId](company, address, url); // DeclaraciónAccesiblidad
+      const legalContent = legalTexts[buttonId](company, email, address, phone, dni, url); // DeclaraciónAccesiblidad
       this.handleCopyClick(legalContent);
     }
   }

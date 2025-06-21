@@ -19,6 +19,10 @@ const dataButtonIds = [
 ]
 
 
+console.log()
+
+
+
 function init() {
   new ClearDataHandler(dataInputIds);
 
