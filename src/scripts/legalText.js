@@ -34,62 +34,45 @@ export const legalTexts = {
             `;
   },
   Politicasdecookies: (email) => {
-    return `<p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Esta página web usa cookies para mejorar la experiencia del usuario. A continuación, encontrará información sobre qué son las cookies, qué tipo de cookies utiliza esta página, cómo puede desactivar las cookies en su navegador y cómo desactivar específicamente la instalación de cookies de terceros. Si no encuentra la información específica que usted está buscando, por favor envíe un correo a </span></span></span></span><a href="mailto:${email}"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>${email}</span></span></span></span></a><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>.</span></span></span></span></p>
-            <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Qué son las cookies? </span></span></span></span></strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Las cookies son pequeños archivos que algunas plataformas, como las páginas web, pueden instalar en su ordenador, smartphone, tableta o televisión conectada. Sus funciones pueden ser muy variadas: almacenar sus preferencias de navegación, recopilar información estadística, permitir ciertas funcionalidades técnicas, etc.</span></span></span></span></p>
-            <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Por qué las utilizamos? </span></span></span></span></strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Las cookies son útiles por varios motivos. Desde un punto de vista técnico, permiten que las páginas web funcionen de forma más ágil y adaptada a sus preferencias, como por ejemplo almacenar su idioma o la moneda de su país. Además, ayudan a los responsables de los sitios web a mejorar los servicios que ofrecen, gracias a la información estadística que recogen a través de ellas y sirven para hacer más eficiente la publicidad que le podemos mostrar.</span></span></span></span></p>
-            <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Qué uso le damos a los diferentes tipos de cookies? </span></span></span></span></strong></p>
+            return `<p style="color: #666666;">Esta página web usa cookies para mejorar la experiencia del usuario. A continuación, encontrará información sobre qué son las cookies, qué tipo de cookies utiliza esta página, cómo puede desactivar las cookies en su navegador y cómo desactivar específicamente la instalación de cookies de terceros. Si no encuentra la información específica que usted está buscando, por favor envíe un correo a <a href="mailto:${email}"><span style="color: #2ea3f2;">${email}</span></a><span style="color: #666666;">.</span></p>
+            <p ><strong><span style="color: #666666;">¿Qué son las cookies?</span></strong><span style="color: #666666;">Las cookies son pequeños archivos que algunas plataformas, como las páginas web, pueden instalar en su ordenador, smartphone, tableta o televisión conectada. Sus funciones pueden ser muy variadas: almacenar sus preferencias de navegación, recopilar información estadística, permitir ciertas funcionalidades técnicas, etc.</span></p>
+            <p ><strong><span style="color: #666666;">¿Por qué las utilizamos?</span></strong><span style="color: #666666;"> Las cookies son útiles por varios motivos. Desde un punto de vista técnico, permiten que las páginas web funcionen de forma más ágil y adaptada a sus preferencias, como por ejemplo almacenar su idioma o la moneda de su país. Además, ayudan a los responsables de los sitios web a mejorar los servicios que ofrecen, gracias a la información estadística que recogen a través de ellas y sirven para hacer más eficiente la publicidad que le podemos mostrar.</span></p>
+            <p ><strong><span style="color: #666666;">¿Qué uso le damos a los diferentes tipos de cookies? </span></strong></p>
             
             <ul type="disc">
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies de sesión: Las cookies de sesión son aquellas que duran el tiempo que el usuario está navegando por la página web y se borran al término.</span></span></span></p>
-            </li>
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies persistentes: Estas cookies quedan almacenadas en el terminal del usuario por un tiempo más largo, facilitando así el control de las preferencias elegidas sin tener que repetir ciertos parámetros cada vez que se visite el sitio web.</span></span></span></p>
-            </li>
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies propias: Son cookies creadas por este sitio web y que solo puede leer el propio sitio. Por ejemplo: cookies técnicas para la carga de imágenes, cookies de personalización de parámetros de la web, cookies de análisis de tráfico, etc.</span></span></span></p>
-            </li>
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies de terceros: Son cookies creadas por terceros y que utilizamos para diferentes servicios (por ej. Análisis del sitio web o publicidad).</span></span></span></p>
-            </li>
+                <li style="color: #666666;">Cookies de sesión: Las cookies de sesión son aquellas que duran el tiempo que el usuario está navegando por la página web y se borran al término. 
+                </li>
+                <li style="color: #666666;">Cookies persistentes: Estas cookies quedan almacenadas en el terminal del usuario por un tiempo más largo, facilitando así el control de las preferencias elegidas sin tener que repetir ciertos parámetros cada vez que se visite el sitio web.
+                </li>
+                <li style="color: #666666;">Cookies propias: Son cookies creadas por este sitio web y que solo puede leer el propio sitio. Por ejemplo: cookies técnicas para la carga de imágenes, cookies de personalización de parámetros de la web, cookies de análisis de tráfico, etc.
+                </li>
+                <li style="color: #666666;">Cookies de terceros: Son cookies creadas por terceros y que utilizamos para diferentes servicios (por ej. Análisis del sitio web o publicidad).
+                </li>
             </ul>
-            <p ><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Según su finalidad:</span></span></span></span></strong></p>
+            <p style="color: #666666;"><strong>Según su finalidad:</strong></p>
             
-            <ul type="disc">
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies técnicas: Las cookies técnicas son aquellas imprescindibles y estrictamente necesarias para el correcto funcionamiento de un portal Web y la utilización de las diferentes opciones y servicios que ofrece. Por ejemplo, las que sirven para el mantenimiento de la sesión, la gestión del tiempo de respuesta, rendimiento o validación de opciones, utilizar elementos de seguridad, compartir contenido con redes sociales, etc.</span></span></span></p>
-            </li>
-            </ul>
-            <p ><span style="color: #666666;"> </span></p>
+            <ul>
+                <li style="color: #666666;">Cookies técnicas: Las cookies técnicas son aquellas imprescindibles y estrictamente necesarias para el correcto funcionamiento de un portal Web y la utilización de las diferentes opciones y servicios que ofrece. Por ejemplo, las que sirven para el mantenimiento de la sesión, la gestión del tiempo de respuesta, rendimiento o validación de opciones, utilizar elementos de seguridad, compartir contenido con redes sociales, etc.
+                </li>
             
-            <ul type="disc">
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies de personalización:Estas cookies permiten al usuario especificar o personalizar algunas características de las opciones generales de la página Web. Por ejemplo, definir el idioma, configuración regional o tipo de navegador.</span></span></span></p>
-            </li>
-            </ul>
-            <p ><span style="color: #666666;"> </span></p>
+                <li style="color: #666666;">Cookies de personalización:Estas cookies permiten al usuario especificar o personalizar algunas características de las opciones generales de la página Web. Por ejemplo, definir el idioma, configuración regional o tipo de navegador.
+                </li>
             
-            <ul type="disc">
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies analíticas: Las cookies analíticas son las utilizadas por nuestro portal Web, para elaborar perfiles de navegación y poder conocer las preferencias de los usuarios del mismo con el fin de mejorar la oferta de productos y servicios. Por ejemplo, mediante una cookie analítica se controlarían las áreas geográficas de mayor interés de un usuario, cuál es el producto de más aceptación, etc.</span></span></span></p>
-            </li>
-            </ul>
-            <p ><span style="color: #666666;"> </span></p>
+                <li style="color: #666666;">Cookies analíticas: Las cookies analíticas son las utilizadas por nuestro portal Web, para elaborar perfiles de navegación y poder conocer las preferencias de los usuarios del mismo con el fin de mejorar la oferta de productos y servicios. Por ejemplo, mediante una cookie analítica se controlarían las áreas geográficas de mayor interés de un usuario, cuál es el producto de más aceptación, etc.
+                </li>
             
-            <ul type="disc">
-                <li>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Cookies publicitarias: Las cookies publicitarias permiten la gestión de los espacios publicitarios en base a criterios concretos. Por ejemplo la frecuencia de acceso, el contenido editado, etc. Las cookies de publicidad permiten a través de la gestión de la publicidad almacenar información del comportamiento a través de la observación de hábitos, estudiando los accesos y formando un perfil de preferencias del usuario, para ofrecerle publicidad relacionada con los intereses de su perfil.</span></span></span></p>
-            </li>
+                <li style="color: #666666;">Cookies publicitarias: Las cookies publicitarias permiten la gestión de los espacios publicitarios en base a criterios concretos. Por ejemplo la frecuencia de acceso, el contenido editado, etc. Las cookies de publicidad permiten a través de la gestión de la publicidad almacenar información del comportamiento a través de la observación de hábitos, estudiando los accesos y formando un perfil de preferencias del usuario, para ofrecerle publicidad relacionada con los intereses de su perfil.
+                </li>
             </ul>
-            <p ><span style="color: #666666;"> </span></p>
-            <p ><strong><span style="color: #666666;"> </span></strong><strong><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>¿Cómo puedo cambiar la configuración de las cookies?</span></span></span></span></strong></p>
-            <p ><a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank" rel="noopener"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Configuración de cookies de Internet Explorer</span></span></span></span></a></p>
-            <p ><a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Configuración de cookies de Firefox</span></span></span></span></a></p>
-            <p ><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Configuración de cookies de Google Chrome</span></span></span></span></a></p>
-            <p ><a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES&amp;locale=es_ES" target="_blank" rel="noopener"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Configuración de cookies de Safari</span></span></span></span></a></p>
-            <p ><a href="http://www.macromedia.com/support/documentation/es/flashplayer/help/settings_manager03.html" target="_blank" rel="noopener"><span style="color: #2ea3f2;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span>Configuración de cookies Flash</span></span></span></span></a></p>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Si desea no permitir almacenar ningún tipo de dato de Flash Player, deseleccione las casillas “Permitir que el contenido de Flash almacene información en el equipo” y “Almacenar los componentes comunes de Flash para reducir los tiempos de descarga”. Si desea limitar la cantidad de datos recogidos por las aplicaciones flash deslice el indicador de la barra del panel de configuración global de almacenamiento en la posición que desee.</span></span></span></p>
-            <p ><span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">Estos navegadores están sometidos a actualizaciones o modificaciones, por lo que no podemos garantizar que se ajusten completamente a la versión de su navegador. También puede ser que utilice otro navegador no contemplado en estos enlaces como Konqueror, Arora, Flock, etc. Para evitar estos desajustes, puede acceder directamente desde las opciones de su navegador, generalmente en el menú de «Opciones» en la sección de «Privacidad». (Por favor, consulte la ayuda de su navegador para más información).</span></span></span></p>`;
+            <p style="color: #666666;"><strong>¿Cómo puedo cambiar la configuración de las cookies?</strong></p>
+            <p><a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank" rel="noopener" style="color: #2ea3f2;">Configuración de cookies de Internet Explorer</a></p>
+            <p><a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener" style="color: #2ea3f2;">Configuración de cookies de Firefox</a></p>
+            <p><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener" style="color: #2ea3f2;">Configuración de cookies de Google Chrome</a></p>
+            <p><a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES&amp;locale=es_ES" target="_blank" rel="noopener" style="color: #2ea3f2;">Configuración de cookies de Safari</a></p>
+            <p><a href="http://www.macromedia.com/support/documentation/es/flashplayer/help/settings_manager03.html" target="_blank" rel="noopener" style="color: #2ea3f2;">Configuración de cookies Flash</a></p>
+            
+            <p style="color: #666666;">Si desea no permitir almacenar ningún tipo de dato de Flash Player, deseleccione las casillas “Permitir que el contenido de Flash almacene información en el equipo” y “Almacenar los componentes comunes de Flash para reducir los tiempos de descarga”. Si desea limitar la cantidad de datos recogidos por las aplicaciones flash deslice el indicador de la barra del panel de configuración global de almacenamiento en la posición que desee.</p>
+            <p style="color: #666666;">Estos navegadores están sometidos a actualizaciones o modificaciones, por lo que no podemos garantizar que se ajusten completamente a la versión de su navegador. También puede ser que utilice otro navegador no contemplado en estos enlaces como Konqueror, Arora, Flock, etc. Para evitar estos desajustes, puede acceder directamente desde las opciones de su navegador, generalmente en el menú de «Opciones» en la sección de «Privacidad». (Por favor, consulte la ayuda de su navegador para más información).</p>`;
   },
   Declaraciondeaccesibilidad: (company, address, url) => {
     let date = new Date();
